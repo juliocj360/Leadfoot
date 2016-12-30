@@ -1,0 +1,25 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: green;
+}
+
+#test {
+  transition: transform .1s ease-in-out;
+  height: 30px;
+  width: 50px;
+}
+
+#canvas {
+  height: 700px;
+  width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+#field {
+  height: 700px;
+  width: 900px;
+}

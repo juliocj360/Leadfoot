@@ -292,7 +292,7 @@ function restarter() {
   window.location.reload(true);
 }
 
-var ford = new Car(100, 100, 'east', 5, 'test', 180);
+var ford = new Car(50, 100, 'east', 5, 'test', 180);
 
 document.body.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowUp') {

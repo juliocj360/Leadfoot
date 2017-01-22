@@ -1,3 +1,3 @@
 # Timer-Game
 
-![Screen Shot](https://cloud.githubusercontent.com/assets/23223086/21583383/362ad27c-d033-11e6-9a7a-1cef0c225581.png)
+![GIF](https://cloud.githubusercontent.com/assets/23223086/22180228/75162404-e01f-11e6-863a-7e4bd61bb333.gif)

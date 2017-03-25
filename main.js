@@ -498,9 +498,8 @@ function restarter() {
 
 var ford = new Car(5, 600, 'west', 2, 'test', 0);
 
-document.body.addEventListener('keydown', (event) => {
-  console.log(event.key)
-  if (event.key === 'ArrowUp') {
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowUp' || event.keyIdentifier === 'Up') {
     if (ford.direction === 'south') {
       ford.rotation += -180
       ford.direction = 'north'
@@ -517,7 +516,7 @@ document.body.addEventListener('keydown', (event) => {
       ford.update(ford)
     }
   }
-  else if (event.key === 'ArrowDown') {
+  else if (event.key === 'ArrowDown' || event.keyIdentifier === 'Down') {
     if (ford.direction === 'north') {
       ford.rotation += 180
       ford.direction = 'south'
@@ -534,7 +533,7 @@ document.body.addEventListener('keydown', (event) => {
       ford.update(ford)
     }
   }
-  else if (event.key === 'ArrowLeft') {
+  else if (event.key === 'ArrowLeft' || event.keyIdentifier === 'Left') {
     if (ford.direction === 'east') {
       ford.rotation += -180
       ford.direction = 'west'
@@ -551,7 +550,7 @@ document.body.addEventListener('keydown', (event) => {
       ford.update(ford)
     }
   }
-  else if (event.key === 'ArrowRight') {
+  else if (event.key === 'ArrowRight' || event.keyIdentifier === 'Right') {
     if (ford.direction === 'west') {
       ford.rotation += 180
       ford.direction = 'east'

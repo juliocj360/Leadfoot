@@ -2,7 +2,6 @@ body,
 html {
   height: 100%;
   width: 100%;
-  overflow: hidden;
   background-color: #022763;
   font-family: 'VT323', monospace;
   margin: 0;

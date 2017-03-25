@@ -21,8 +21,11 @@ function Car(locY, locX, direction, speed, name, rotation) {
 function renderCar(car) {
   var canvas = document.getElementById('canvas')
   var auto = document.createElement('img');
-  auto.setAttribute('src', 'https://lh3.googleusercontent.com/INWVs0i2o7mPRFlqHV_IPlvk_iSsO_mCiEjBk6FtLPWEyfRYFxF6-MFjihe8GwrLBM-TJ_K55HXCrg=w1440-h900-rw-no');
-  auto.style = "position: absolute; margin: auto; top: " + car.locY + "px; left: " + car.locX + "px;";
+  auto.setAttribute('src', 'https://cloud.githubusercontent.com/assets/23223086/24324952/eb9d2970-114c-11e7-96bb-c2ead2d11ddf.png');
+  auto.style.position = 'absolute'
+  auto.style.margin = 'auto'
+  auto.style.top = car.locY + "px"
+  auto.style.left = car.locX + "px"
   auto.setAttribute('id',car.name);
   auto.setAttribute('class',car.direction);
   canvas.appendChild(auto);
@@ -33,7 +36,7 @@ function renderCar(car) {
 var obstacles = [
   {
     name: 'treeOne',
-    url: 'https://lh3.googleusercontent.com/hHvLu9xGWogPHppaDD-IfwWZ9HOEOQaGzzgp47oDueotnciAwwTtbFNJzn1JXOGCHxjwj0w0t7gWvFQ6_xQdV5n76eQ_sCzG=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324984/65c1ceae-114d-11e7-8e24-6349cd9a86cc.png',
     height: 80,
     width: 80,
     speed: 0,
@@ -43,7 +46,7 @@ var obstacles = [
   },
   {
     name: 'fountain',
-    url: 'https://lh3.googleusercontent.com/GQvngfySY6C4GCodwk0omkRUu2f6WJ_2PQ041t0rkfcXgwU6uqUJ5U9989avdyFvfQm4rQvCu9AWVo4ascvtU83saEYSrdBwcg=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324956/f3fe6764-114c-11e7-992a-ef5fb50d0866.png',
     height: 115,
     width: 115,
     speed: 0,
@@ -53,7 +56,7 @@ var obstacles = [
   },
   {
     name: 'treeTwo',
-    url: 'https://lh3.googleusercontent.com/hHvLu9xGWogPHppaDD-IfwWZ9HOEOQaGzzgp47oDueotnciAwwTtbFNJzn1JXOGCHxjwj0w0t7gWvFQ6_xQdV5n76eQ_sCzG=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324984/65c1ceae-114d-11e7-8e24-6349cd9a86cc.png',
     height: 150,
     width: 150,
     speed: 0,
@@ -63,7 +66,7 @@ var obstacles = [
   },
   {
     name: 'treeThree',
-    url: 'https://lh3.googleusercontent.com/hHvLu9xGWogPHppaDD-IfwWZ9HOEOQaGzzgp47oDueotnciAwwTtbFNJzn1JXOGCHxjwj0w0t7gWvFQ6_xQdV5n76eQ_sCzG=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324984/65c1ceae-114d-11e7-8e24-6349cd9a86cc.png',
     height: 80,
     width: 80,
     speed: 0,
@@ -73,7 +76,7 @@ var obstacles = [
   },
   {
     name: 'treeFour',
-    url: 'https://lh3.googleusercontent.com/hHvLu9xGWogPHppaDD-IfwWZ9HOEOQaGzzgp47oDueotnciAwwTtbFNJzn1JXOGCHxjwj0w0t7gWvFQ6_xQdV5n76eQ_sCzG=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324984/65c1ceae-114d-11e7-8e24-6349cd9a86cc.png',
     height: 190,
     width: 190,
     speed: 0,
@@ -83,7 +86,7 @@ var obstacles = [
   },
   {
     name: 'treeSix',
-    url: 'https://lh3.googleusercontent.com/hHvLu9xGWogPHppaDD-IfwWZ9HOEOQaGzzgp47oDueotnciAwwTtbFNJzn1JXOGCHxjwj0w0t7gWvFQ6_xQdV5n76eQ_sCzG=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324984/65c1ceae-114d-11e7-8e24-6349cd9a86cc.png',
     height: 130,
     width: 130,
     speed: 0,
@@ -93,7 +96,7 @@ var obstacles = [
   },
   {
     name: 'benchOne',
-    url: 'https://lh3.googleusercontent.com/TggiLLThpnepIByRwEbl0aWyahd2XOaVdBSpCyXXknv0unc2kW4maIgCd0_AlieKclwI7kfxOfFCQfU4HShWGoh41nGZTKna=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324948/db1ad214-114c-11e7-8cb5-3e8ba6da61f1.png',
     height: 90,
     width: 20,
     speed: 0,
@@ -103,7 +106,7 @@ var obstacles = [
   },
   {
     name: 'benchTwo',
-    url: 'https://lh3.googleusercontent.com/TggiLLThpnepIByRwEbl0aWyahd2XOaVdBSpCyXXknv0unc2kW4maIgCd0_AlieKclwI7kfxOfFCQfU4HShWGoh41nGZTKna=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324948/db1ad214-114c-11e7-8cb5-3e8ba6da61f1.png',
     height: 90,
     width: 20,
     speed: 0,
@@ -113,7 +116,7 @@ var obstacles = [
   },
   {
     name: 'topLeftWall',
-    url: 'https://lh3.googleusercontent.com/e7yxpgp40N3qbuuxhZK46kY1_d5WB7-dGUhI2Z2LGcPtLvzdtipFPS4XMmnyLC0t-ew74P9whkKXJoGStn-IC_k6BbxC05yfWg=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324950/e7f63492-114c-11e7-9e3f-cfae597f153f.png',
     height: 10,
     width: 270,
     speed: 0,
@@ -123,7 +126,7 @@ var obstacles = [
   },
   {
     name: 'topRightWall',
-    url: 'https://lh3.googleusercontent.com/e7yxpgp40N3qbuuxhZK46kY1_d5WB7-dGUhI2Z2LGcPtLvzdtipFPS4XMmnyLC0t-ew74P9whkKXJoGStn-IC_k6BbxC05yfWg=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324950/e7f63492-114c-11e7-9e3f-cfae597f153f.png',
     height: 10,
     width: 250,
     speed: 0,
@@ -133,7 +136,7 @@ var obstacles = [
   },
   {
     name: 'bottomLeftWall',
-    url: 'https://lh3.googleusercontent.com/e7yxpgp40N3qbuuxhZK46kY1_d5WB7-dGUhI2Z2LGcPtLvzdtipFPS4XMmnyLC0t-ew74P9whkKXJoGStn-IC_k6BbxC05yfWg=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324950/e7f63492-114c-11e7-9e3f-cfae597f153f.png',
     height: 10,
     width: 270,
     speed: 0,
@@ -143,7 +146,7 @@ var obstacles = [
   },
   {
     name: 'topRightWall',
-    url: 'https://lh3.googleusercontent.com/e7yxpgp40N3qbuuxhZK46kY1_d5WB7-dGUhI2Z2LGcPtLvzdtipFPS4XMmnyLC0t-ew74P9whkKXJoGStn-IC_k6BbxC05yfWg=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324950/e7f63492-114c-11e7-9e3f-cfae597f153f.png',
     height: 10,
     width: 250,
     speed: 0,
@@ -153,7 +156,7 @@ var obstacles = [
   },
   {
     name: 'leftTopWall',
-    url: 'https://lh3.googleusercontent.com/i13ChLLJg2Pw2TIUoyX-GmoAWFv358CNuT5w8CJtxOqDRF7cRyeAG6XEJ7Y-vXmjMZsZdCZ9eipN0cLywenpshU8ngbvAIF3=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324949/e2f42102-114c-11e7-8962-dfd06b1f3905.png',
     height: 170,
     width: 10,
     speed: 0,
@@ -163,7 +166,7 @@ var obstacles = [
   },
   {
     name: 'rightTopWall',
-    url: 'https://lh3.googleusercontent.com/i13ChLLJg2Pw2TIUoyX-GmoAWFv358CNuT5w8CJtxOqDRF7cRyeAG6XEJ7Y-vXmjMZsZdCZ9eipN0cLywenpshU8ngbvAIF3=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324949/e2f42102-114c-11e7-8962-dfd06b1f3905.png',
     height: 170,
     width: 10,
     speed: 0,
@@ -173,7 +176,7 @@ var obstacles = [
   },
   {
     name: 'leftBottomWall',
-    url: 'https://lh3.googleusercontent.com/i13ChLLJg2Pw2TIUoyX-GmoAWFv358CNuT5w8CJtxOqDRF7cRyeAG6XEJ7Y-vXmjMZsZdCZ9eipN0cLywenpshU8ngbvAIF3=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324949/e2f42102-114c-11e7-8962-dfd06b1f3905.png',
     height: 170,
     width: 10,
     speed: 0,
@@ -183,7 +186,7 @@ var obstacles = [
   },
   {
     name: 'rightTopWall',
-    url: 'https://lh3.googleusercontent.com/i13ChLLJg2Pw2TIUoyX-GmoAWFv358CNuT5w8CJtxOqDRF7cRyeAG6XEJ7Y-vXmjMZsZdCZ9eipN0cLywenpshU8ngbvAIF3=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324949/e2f42102-114c-11e7-8962-dfd06b1f3905.png',
     height: 170,
     width: 10,
     speed: 0,
@@ -193,7 +196,7 @@ var obstacles = [
   },
   {
     name: 'treeFive',
-    url: 'https://lh3.googleusercontent.com/hHvLu9xGWogPHppaDD-IfwWZ9HOEOQaGzzgp47oDueotnciAwwTtbFNJzn1JXOGCHxjwj0w0t7gWvFQ6_xQdV5n76eQ_sCzG=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324984/65c1ceae-114d-11e7-8e24-6349cd9a86cc.png',
     height: 100,
     width: 100,
     speed: 0,
@@ -203,7 +206,7 @@ var obstacles = [
   },
   {
     name: 'carOne',
-    url: 'https://lh3.googleusercontent.com/B1EyJntGVR-l50YU02TDJiLLFWWyDGOGXYQHnyVrHNeeX5PykOiRs6Nw2BsPK1BWv_3Q9dpyRGWk21j5fQ3keIwEGD_2yGpC=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324961/00111b0a-114d-11e7-8749-fbdfc32443dc.png',
     height: 30,
     width: 50,
     speed: 1,
@@ -216,7 +219,7 @@ var obstacles = [
   },
   {
     name: 'carTwo',
-    url: 'https://lh3.googleusercontent.com/B1EyJntGVR-l50YU02TDJiLLFWWyDGOGXYQHnyVrHNeeX5PykOiRs6Nw2BsPK1BWv_3Q9dpyRGWk21j5fQ3keIwEGD_2yGpC=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324961/00111b0a-114d-11e7-8749-fbdfc32443dc.png',
     height: 30,
     width: 50,
     speed: 1,
@@ -229,7 +232,7 @@ var obstacles = [
   },
   {
     name: 'carThree',
-    url: 'https://lh3.googleusercontent.com/B1EyJntGVR-l50YU02TDJiLLFWWyDGOGXYQHnyVrHNeeX5PykOiRs6Nw2BsPK1BWv_3Q9dpyRGWk21j5fQ3keIwEGD_2yGpC=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324961/00111b0a-114d-11e7-8749-fbdfc32443dc.png',
     height: 30,
     width: 50,
     speed: 1,
@@ -242,7 +245,7 @@ var obstacles = [
   },
   {
     name: 'carFour',
-    url: 'https://lh3.googleusercontent.com/B1EyJntGVR-l50YU02TDJiLLFWWyDGOGXYQHnyVrHNeeX5PykOiRs6Nw2BsPK1BWv_3Q9dpyRGWk21j5fQ3keIwEGD_2yGpC=w1440-h900-rw-no',
+    url: 'https://cloud.githubusercontent.com/assets/23223086/24324961/00111b0a-114d-11e7-8749-fbdfc32443dc.png',
     height: 30,
     width: 50,
     speed: 1,
@@ -261,7 +264,12 @@ function renderObstacles(array) {
     var name = document.createElement('img')
     name.setAttribute('src', array[i].url)
     name.setAttribute('id', array[i].name);
-    name.style = "position: absolute; margin: auto; top: " + array[i].locY + "px; left: " + array[i].locX + "px; height: " + array[i].height + "px; width: " + array[i].width + "px;"
+    name.style.position = 'absolute'
+    name.style.margin = 'auto'
+    name.style.top = array[i].locY + "px"
+    name.style.left = array[i].locX + "px"
+    name.style.height = array[i].height + "px"
+    name.style.width = array[i].width + "px"
     canvas.appendChild(name)
     if (array[i].speed > 0) {
       obstacleTimer(array, i)
@@ -356,19 +364,19 @@ function obstacleBouncer(car) {
 function bounce(index) {
   if (obstacles[index].direction === 'east') {
     obstacles[index].direction = 'west'
-    obstacles[index].locX += -2
+    obstacles[index].locX += -3
   }
   else if (obstacles[index].direction === 'west') {
     obstacles[index].direction = 'east'
-    obstacles[index].locX += 2
+    obstacles[index].locX += 3
   }
   else if (obstacles[index].direction === 'north') {
     obstacles[index].direction = 'south'
-    obstacles[index].locY += 2
+    obstacles[index].locY += 3
   }
   else if (obstacles[index].direction === 'south') {
     obstacles[index].direction = 'north'
-    obstacles[index].locY += -2
+    obstacles[index].locY += -3
 
   }
   obstacles[index].rotation += 180
@@ -390,7 +398,13 @@ function obstacleUpdater(array, index) {
   else if (array[index].direction === 'east') {
     array[index].locX += (array[index].speed + obstacleSpeedInput);
   }
-  el.style = "position: absolute; top: " + array[index].locY + "px; left: " + array[index].locX + "px; height: " + array[index].height + "px; transform: rotate( " + array[index].rotation + "deg); transition: transform .1s ease-in-out; width: " + array[index].width + "px;"
+  el.style.position = 'absolute'
+  el.style.top = array[index].locY + "px"
+  el.style.left = array[index].locX + "px"
+  el.style.height = array[index].height + "px"
+  el.style.transform = 'rotate( ' + array[index].rotation + 'deg)'
+  el.style.transition = 'transform .1s ease-in-out'
+  el.style.width = array[index].width + "px"
 }
 
 function carTurner(array, index) {
@@ -403,11 +417,11 @@ function carTurner(array, index) {
       (dir === 'east') ? (array[index].rotation += -90) : (array[index].rotation += 90)
       array[index].direction = 'north'
     }
-    else if (((dir === 'north') && ((locY < 55) && (locX < 100))) || (dir === 'south') && ((locY > 600) && (locX < 100))) {
+    else if (((dir === 'north') && ((locY < 55) && (locX < 100))) || (dir === 'south') && ((locY > 595) && (locX < 100))) {
       (dir === 'south') ? (array[index].rotation += -90) : (array[index].rotation += 90)
       array[index].direction = 'east'
     }
-    else if (((dir === 'north') && ((locY < 55)) && (locX > 500)) || ((dir === 'south') && ((locY > 600) && (locX > 500)))) {
+    else if (((dir === 'north') && ((locY < 55)) && (locX > 500)) || ((dir === 'south') && ((locY > 595) && (locX > 500)))) {
       (dir === 'north') ? (array[index].rotation += -90) : (array[index].rotation += 90)
       array[index].direction = 'west'
     }
@@ -452,7 +466,11 @@ Car.prototype.update = function (car) {
   else if (this.direction === 'east') {
     this.locX += speedInput;
   }
-  el.style = "position: absolute; margin: auto; top: " + car.locY + "px; left: " + car.locX + "px; transform: rotate( " + car.rotation + "deg)";
+  el.style.position = 'absolute'
+  el.style.margin = 'auto'
+  el.style.top = car.locY + "px"
+  el.style.left = car.locX + "px"
+  el.style.transform = "rotate( " + car.rotation + "deg)"
   el.setAttribute('class',car.direction);
 }
 
@@ -474,13 +492,14 @@ function restarter() {
   ford.rotation = 0
   intervalId += 1
   var car = document.getElementById(ford.name)
-  car.setAttribute('src', 'https://lh3.googleusercontent.com/INWVs0i2o7mPRFlqHV_IPlvk_iSsO_mCiEjBk6FtLPWEyfRYFxF6-MFjihe8GwrLBM-TJ_K55HXCrg=w1440-h900-rw-no');
+  car.setAttribute('src', 'https://cloud.githubusercontent.com/assets/23223086/24324952/eb9d2970-114c-11e7-96bb-c2ead2d11ddf.png');
   timer(ford);
 }
 
 var ford = new Car(5, 600, 'west', 2, 'test', 0);
 
 document.body.addEventListener('keydown', (event) => {
+  console.log(event.key)
   if (event.key === 'ArrowUp') {
     if (ford.direction === 'south') {
       ford.rotation += -180
